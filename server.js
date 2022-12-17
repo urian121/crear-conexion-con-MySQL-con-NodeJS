@@ -31,8 +31,19 @@ conBD.connect( (error)=>{
         console.log('Conexión exitosa a BD');
         getClientes(); //Llamamos a esta función para obtener una lista de registros.
     }
+    
+    conBD.end(); //Cerrando la conexion de BD
+    
+    /** Tambien podemos cerrar la conexion de BD así:
+     * conBD.destroy();
+     * 
+     * Otra forma de cerrar una conexión seria así:
+    conBD.end((err)=> { 
+        if (err) throw err;
+        else  console.log('Conexion de BD cerrada correctamente.') 
+    });
+    */
 });
-
 
 
 
@@ -45,7 +56,7 @@ const getClientes = ()=>{
     if(err) throw err; //Mostrará este mensaje si hay error en la consulta SQL.
 
     /**Si no hay error en la consulta SQL */
-    console.log(results);
+    //console.log(results);
     console.log(`Total de Registros: ${results.length}`)
     console.table(results);
 
