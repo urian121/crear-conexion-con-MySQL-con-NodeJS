@@ -4,3 +4,7 @@ paquetes (Modulos) instalados en el proyecto.
 2. Para hacer correr el proyecto solo basta ejecutar ; npm i
 el cual instalara toda las dependencias del proyecto las cuales se encuetran el en archivo 
 package.json
+
+3. Para ejecutar el archivo server, hay varias formas
+ - node server.js
+ - node --watch server.js  este un paquete que ya bien con nodeJS   
