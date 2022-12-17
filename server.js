@@ -1,17 +1,19 @@
-/**Requerimos el paquete -modulo (mysql) */
+/**Requerimos el paquete - modulo (mysql) */
 const mysq = require('mysql');
 
-/**Definimos un const llamada confiBD la cual sera igual a un objeto JSON
+/**Definimos un const llamada confiBD la cuál será igual a un objeto JSON
  * con los parametros que se necesitan para conectar NodeJS con una BD en MySQL.
  */
-const confiBD ={
+const confiBD =
+{
     host : 'localhost',
     user: 'root',
     password: '',
     database: 'node_mysql',
     port: 3306
 }
-console.log(confiBD);
+//console.log(confiBD);
+
 
 /** Creamos una constante llamada conBD la cuál será igual al método mysql.createConnection()
  *  de MySQL, esto servirá para interactuar con el servidor de MySQL.
@@ -33,27 +35,30 @@ conBD.connect( (error)=>{
 
 
 
+
 /**Defino una función para realizar un sql al gestor de BD MySQL */
 const getClientes = ()=>{
     const sql = "SELECT * FROM carros ORDER BY id DESC";
+
+    /** La función query() se usa para ejecutar la consulta SQL en la base de datos MySQL */
     conBD.query(sql, (err, results, fields)=>{
     if(err) throw err; //Mostrará este mensaje si hay error en la consulta SQL.
 
     /**Si no hay error en la consulta SQL */
         console.log(results);
-        console.log(`Total de Registros: ${results.length}`)
-        console.table(results);
+       // console.log(`Total de Registros: ${results.length}`)
+       // console.table(results);
 
     /**Recorriendo todos los registros con el metodo forEach de JavaScript */
-    results.forEach(result => {
+    /*results.forEach(result => {
         console.log(result);
-    });
+    });*/
         
     /**Recorriendo todos los registros obtenidos de la consulta con el método for de JavaScript */
-    for (let i = 0; i < results.length; i++) {
+    /*for (let i = 0; i < results.length; i++) {
         const elemento = results[i].marca;
         console.log({elemento})
-    }
+    }*/
 
     })
 }
