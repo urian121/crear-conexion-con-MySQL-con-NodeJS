@@ -45,20 +45,20 @@ const getClientes = ()=>{
     if(err) throw err; //Mostrará este mensaje si hay error en la consulta SQL.
 
     /**Si no hay error en la consulta SQL */
-        console.log(results);
-       // console.log(`Total de Registros: ${results.length}`)
-       // console.table(results);
+    console.log(results);
+    console.log(`Total de Registros: ${results.length}`)
+    console.table(results);
 
     /**Recorriendo todos los registros con el metodo forEach de JavaScript */
-    /*results.forEach(result => {
+    results.forEach(result => {
         console.log(result);
-    });*/
+    });
         
     /**Recorriendo todos los registros obtenidos de la consulta con el método for de JavaScript */
-    /*for (let i = 0; i < results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
         const elemento = results[i].marca;
         console.log({elemento})
-    }*/
+    }
 
     })
 }
