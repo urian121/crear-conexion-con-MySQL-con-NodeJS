@@ -2,7 +2,7 @@
   "name": "como-conectarse-a-mysql-con-nodejs",
   "version": "1.0.0",
   "description": "1. Paso 1: crear un archivo package.json con el fin de llevar un control de todos mis\r paquetes (Modulos) instalados en el proyecto.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
