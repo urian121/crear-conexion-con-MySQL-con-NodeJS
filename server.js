@@ -1,7 +1,7 @@
 /**Requerimos el paquete - modulo (mysql) */
 const mysq = require('mysql');
 
-/**Definimos un const llamada confiBD la cuál será igual a un objeto JSON
+/**Definimos una constante llamada confiBD la cuál será igual a un objeto JSON
  * con los parametros que se necesitan para conectar NodeJS con una BD en MySQL.
  */
 const confiBD =
